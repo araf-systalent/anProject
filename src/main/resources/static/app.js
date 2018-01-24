@@ -58,13 +58,10 @@
                 controllerAs: 'vm'
             })
 
-            .when('/register', {
-                controller: 'RegisterController',
-                templateUrl: 'register/register.view.html',
-                controllerAs: 'vm'
-            })
 
-            .otherwise({ redirectTo: '/' });
+           
+            .otherwise({ redirectTo: '/login' });
+
     }
 
     run.$inject = ['$rootScope', '$location', '$cookies', '$http','UserService','LoggedUserService'];
