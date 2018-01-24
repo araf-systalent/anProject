@@ -19,10 +19,36 @@
 	
 	function SiteBarLink(scope){
 
-		scope.menuLsit=$rootScope.menuLsit;
+    scope.menuLsit=$rootScope.menuLsit;
+    scope.isLogged=$rootScope.isLogged;
+    scope.isActivePage=function(pageurl){
+      var path =$location.path();
+     
+      if(scope.isActive(pageurl)){
+        return "dropdown-submenu headerBg3";
+      }
+      else{
+        return "";
+      }
+  };
+
+  scope.isActive=function(pageurl){
+    var path =$location.path();
+    if(path=='/' && pageurl=='simulation' ){
+      return true;
+    }
+    if(path=='/'+pageurl){
+      return true;
+    }
+    else{
+      return false;
+    }
+};
 		
 	}
     return directiveDefinitionObject;
+
+    
   }
   
   

@@ -17,67 +17,33 @@
 
         function Login(username, password, callback) {
 
-            /* Dummy authentication for testing, uses $timeout to simulate api call
-             ----------------------------------------------*/
-            // k
-             
-            // $timeout(function () {
-            //     var response;
-            //     if (username !== null && username === password && password==="admin") {
-            //         var data="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmxzIjoiW1wic2ltdWxhdGlvblwiLFwic2ltLWFuYWx5c2lzXCIsXCJzdHJhdGVnaWMtYW5hbHlzaXNcIixcInNjZW5hcmlvc1wiXSIsInJvbGVzIjpbIlNURCJdLCJuYW1lIjoiVGVzdCIsIm1lbnUiOiJbe1wic2VxUG9zXCI6MC4wLFwibWVudVRleHRcIjpcIlNpbXVsYXRpb25cIixcIm1lbnVVcmxcIjpcInNpbXVsYXRpb25cIixcImljb25VcmxcIjpcIlwifSx7XCJzZXFQb3NcIjoxLjAsXCJtZW51VGV4dFwiOlwiU2ltdWxhdGlvbiBBbmFseXNpc1wiLFwibWVudVVybFwiOlwic2ltLWFuYWx5c2lzXCIsXCJpY29uVXJsXCI6XCJcIn0se1wic2VxUG9zXCI6Mi4wLFwibWVudVRleHRcIjpcIlN0cmF0ZWdpYyBBbmFseXNpc1wiLFwibWVudVVybFwiOlwic3RyYXRlZ2ljLWFuYWx5c2lzXCIsXCJpY29uVXJsXCI6XCJcIn0se1wic2VxUG9zXCI6My4wLFwibWVudVRleHRcIjpcIlNjZW5hcmlvIEFuYWx5c2lzXCIsXCJtZW51VXJsXCI6XCJzY2VuYXJpb3NcIixcImljb25VcmxcIjpcIlwifV0iLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTY2MDYxMDUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SnliMnhsY3lJNld5SlRWRVFpWFN3aWRYTmxjaUk2SW5SbGMzUmZkWE5sY2w4eElpd2lhV0YwSWpveE5URTJOakEyTVRBMWZRLkVFRFg4UmdvX3Byak5zYkhsdjg5QmVqUjRvSnNabE5KbmFqR2twQ3JWSEkifQ.cNxCjC072lTxu2ei-7uCDYmMhgY41ssdN1HzA-xLy3I";
-            //         response = { success: true ,data:data};
-            //     } else {
-            //         response = { success: false, message: 'Username or password is incorrect' };
-            //     }
-            //     callback(response);
-            // }, 1000);
-            
-            /* Use this for real authentication
-             ----------------------------------------------*/
-             //SetLoginAuthCredentials();
-
-            //  var config = {headers: {
-            //     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo'
-            //     }
-            //   };
-            // $http.post('http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/api/auth',config)
-            //     .success(function (response) {
-            //         callback(response);
-            //     });
-            $http({
-                url : "http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/api/auth",
-                method : 'POST',
-                transformResponse: [function (data) {
-                    // Do whatever you want!
-                    return {data:data};
-                }],
-                headers : {
-                       Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo'
-                }
-              }).then(function(htppResponse){
-                //success code
-                console.log(response);
-                var response = { success: true ,data:htppResponse.data.data};
-                callback(response);
-            }, function(httpResponse){
-                //error code
-                console.log("InvalidLogin");
+            if(username!='test_user_1'){
                 var response = { success: false, message: 'Username or password is incorrect' };
                 callback(response);
-            });;
-
-            // $http({
-                
-            //     url : "http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/api/auth",
-            //     method : 'POST',
-            //     responseType: 'text',
-            //     headers : {
-            //           Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo'
-            //           }
-            //     }).then(function(response){
-            //         console.log(response);
-            //     }, errorCallback);
-
+            }
+            else{
+                $http({
+                    url : "http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/api/auth",
+                    method : 'POST',
+                    transformResponse: [function (data) {
+                        // Do whatever you want!
+                        return {data:data};
+                    }],
+                    headers : {
+                           Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo'
+                    }
+                  }).then(function(htppResponse){
+                    //success code
+                    console.log(response);
+                    var response = { success: true ,data:htppResponse.data.data};
+                    callback(response);
+                }, function(httpResponse){
+                    //error code
+                    console.log("InvalidLogin");
+                    var response = { success: false, message: 'Username or password is incorrect' };
+                    callback(response);
+                });;
+            }
         }
 
         function successCallback(htppResponse){

@@ -1,161 +1,148 @@
 ﻿<!-- <section class="scrollable" id="pjax-container"> -->
              
-    <section class="hbox stretch">
-        <!-- .aside -->
-        <aside class="bg-success dker aside-sm nav-vertical" id="nav">
-            <section class="vbox">
-               <header min-header class="bg-black nav-bar headerBg"></header>
-                <section>
-                    <!-- nav -->
-                    <nav side-bar class="nav-primary hidden-xs nav-off-screen" id="menuContainer">
-                        
-                    </nav>
-                </section>
-            </section>
-        </aside>
-        <!-- /.aside -->
-        <!-- .vbox -->
-        <section id="content">
-            <section class="vbox">
-             
-                <header full-header class="header bg-black navbar navbar-inverse headerBg2">
-                
-                </header>
-              
+
 
                 <!-----------------------Wraper-------------------->
 
-
+  
                 <div class="wrapper">
-                 
-                        <div class="col-lg-4 col-md-4 col-sm-12" style="padding:0px;">
-                         <div class="colom-parametre">
-                         <h1>Parameters  </h1>
-                         <div class="para-input">   
-                         
-                         <div class="form-group row">
-                         <label for="inputEmail3" class="col-sm-4 col-form-label">Date Range</label>
-                         <div class="col-sm-3" style="padding-right:0px;">
-                         <input type="text" class="form-control" id="text">
-                        </div>
-                        
-                        <div class="col-sm-1 ot">to</div>
-                        <div class="col-sm-3" style="padding-right:0px;">
-                         <input type="text" class="form-control" id="text">
-                        </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                         <label for="inputEmail3" class="col-sm-4 col-form-label">Client Group</label>
-                         <div class="col-sm-8">
-                            <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedclientGroup" ng-options="clientGroup for clientGroup in vm.clientGroup">
-                              </select>
-                           
-                        </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                         <label for="inputEmail3" class="col-sm-4 col-form-label">Cat-Class</label>
-                         <div class="col-sm-8">
-                            <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedCatClass" ng-options="catClass for catClass in vm.catClass">
-                              </select>
-                        </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                         <label for="inputEmail3" class="col-sm-4 col-form-label">Price Structure</label>
-                         <div class="col-sm-8">
-                            <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedpriceStructure" ng-options="priceStructure for priceStructure in vm.priceStructure">
-                              </select>
-                        </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                         <label for="inputEmail3" class="col-sm-4 col-form-label">Price Level</label>
-                         <div class="col-sm-4">
-                          <div class="input-group spinner" data-trigger="spinner">
-                          <input type="text" class="form-control text-center" value="1" data-rule="quantity">
-                          <div class="input-group-addon">
-                            <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-up"></i></a>
-                            <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
-                          </div>
-                        </div>
-                        </div>
-                        </div>
-                        
-                        
-                        <div class="form-group row">
-                        <div class="col-sm-12 run"><h1><button type="button" class="btn btn-warning">Run</button></h1></div>
-                        </div>
-                         
-                         </div>
-                       
-                         </div>   
-    
-                        </div>
-                        
-                          
-                          
-                           <!-----------------------summary-------------------->
-                           
-                           
-                           
-                                                 
-                         <div class="col-lg-8 col-md-8 col-sm-12 summary-colom">
-                         <div class="md-12" style="background:#fff;padding-top:15px;"><h1>Summary Statistics</h1></div>
-                         
-                         <div class="col-md-12" style="padding:0px;">
-                         
-                         <div class="col-lg-4 col-md-12 col-sm-12" style="padding:0px;">
-                         
-                         <div class="col-sm-12 epc-colom">
-                         <div class="epc-value">+ $12,345  </div>
-                         <div class="epc-des">estimated profit chg</div>
-                         </div>
-                         
-                         <div class="col-sm-12 spc-colom">
-                         <div class="spc-value">+ $12,345  </div>
-                         <div class="spc-des">stdev profit chg</div>
-                         </div>
-                         
-                         </div>
-                         
-                         <div class="col-lg-8 col-md-12 avch">
-                         
-                         <div class="col-sm-12 avg-colom">
-                         <div class="avg-head"><h2>Avg chg in rental length</h2></div>
-                         <div class="avg-value"> +0.5 Days</div>
-                         </div>
-                         
-                         <div class="col-sm-12 avg-colom">
-                         <div class="avg-head"><h2>Rentals analysed</h2></div>
-                         <div class="avg-value">1500</div>
-                         </div>
-                         
-                         <div class="col-sm-12 avg-colom">
-                         <div class="avg-head"><h2>Days analysed </h2></div>
-                         <div class="avg-value"> 60</div>
-                         </div>
-                         
-                         </div>
-                         
-                         </div>
-                         
-                         <div class="col-md-12 col-sm-12 chart-graph" style="padding:15px;">
-                         <img src="app-content/images/demo_chart.jpg" alt="image" class="img-responsive"/>
-                         
-                         
-                         </div>
-                         
-                         
-    
-                         </div>
-    
-                    </div>
                     
-                <!-- </section> -->
-
-              </section>
-              <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
-          </section>
-      </section>
+                           <div class="col-lg-4 col-md-4 col-sm-12" style="padding:0px;">
+                            <div class="colom-parametre">
+                            <h1>Parameters  </h1>
+                            <form action="#" method="get">
+                            <div class="para-input">   
+                            
+                            <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Date Range</label>
+                            <div class="col-sm-3" style="padding-right:0px;">
+                            <input type="date" class="form-control" id="fromDate"  oninvalid="this.setCustomValidity('fill the first date')" required>
+                           </div>
+                           
+                           <div class="col-sm-1 ot">to</div>
+                           <div class="col-sm-3" style="padding-right:0px;">
+                            <input type="date" class="form-control" id="toDate"  oninvalid="this.setCustomValidity('fill the second date')" required>
+                           </div>
+                           </div>
+                           
+                           <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Client Group</label>
+                            <div class="col-sm-8">
+                               <select class="form-control"  ng-model="selectedclientGroup"required>
+                                 <option value="" selected>--Select Client Group--</option>
+                                <option value={{cg}} ng-repeat="cg in vm.clientGroup">{{cg}}</option> 
+                              
+                               </select>
+                              
+                           </div>
+                           </div>
+                           
+                           <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Cat-Class</label>
+                            <div class="col-sm-8">
+                               <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedCatClass" required>
+                                   <option value="" selected>--Select cat Class--</option>
+                                   <option value={{cc}} ng-repeat="cc in vm.catClass">{{cc}}</option> 
+                               </select>
+                           </div>
+                           </div>
+                           
+                           <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Price Structure</label>
+                            <div class="col-sm-8">
+                               <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedpriceStructure" required>
+                               
+                               <option value="" selected>--Select price Structure--</option>
+                               <option value={{ps}} ng-repeat="ps in vm.priceStructure">{{ps}}</option> 
+                             </select>
+                           </div>
+                           </div>
+                           
+                           <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Price Level</label>
+                            <div class="col-sm-4">
+                             <div class="input-group spinner" data-trigger="spinner">
+                             <input type="text" class="form-control text-center" value="1" data-rule="quantity">
+                             <div class="input-group-addon">
+                               <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-up"></i></a>
+                               <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
+                             </div>
+                           </div>
+                           </div>
+                           </div>
+                           
+                           
+                           <div class="form-group row">
+                           <div class="col-sm-12 run"><h1><button type="submit" class="btn btn-warning">Run</button></h1></div>
+                           </div>
+                            
+                            </div>
+                          </form>
+                            </div>   
+       
+                           </div>
+                           
+                             
+                             
+                              <!-----------------------summary-------------------->
+                              
+                              
+                              
+                                                    
+                            <div class="col-lg-8 col-md-8 col-sm-12 summary-colom">
+                            <div class="md-12" style="background:#fff;padding-top:15px;"><h1>Summary Statistics</h1></div>
+                            
+                            <div class="col-md-12" style="padding:0px;">
+                            
+                            <div class="col-lg-4 col-md-12 col-sm-12" style="padding:0px;">
+                            
+                            <div class="col-sm-12 epc-colom">
+                            <div class="epc-value">+ $12,345  </div>
+                            <div class="epc-des">estimated profit chg</div>
+                            </div>
+                            
+                            <div class="col-sm-12 spc-colom">
+                            <div class="spc-value">+ $12,345  </div>
+                            <div class="spc-des">stdev profit chg</div>
+                            </div>
+                            
+                            </div>
+                            
+                            <div class="col-lg-8 col-md-12 avch">
+                            
+                            <div class="col-sm-12 avg-colom">
+                            <div class="avg-head"><h2>Avg chg in rental length</h2></div>
+                            <div class="avg-value"> +0.5 Days</div>
+                            </div>
+                            
+                            <div class="col-sm-12 avg-colom">
+                            <div class="avg-head"><h2>Rentals analysed</h2></div>
+                            <div class="avg-value">1500</div>
+                            </div>
+                            
+                            <div class="col-sm-12 avg-colom">
+                            <div class="avg-head"><h2>Days analysed </h2></div>
+                            <div class="avg-value"> 60</div>
+                            </div>
+                            
+                            </div>
+                            
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 chart-graph" style="padding:15px;">
+                            <img src="app-content/images/demo_chart.jpg" alt="image" class="img-responsive"/>
+                            
+                            
+                            </div>
+                            
+                            
+       
+                            </div>
+       
+                       </div>
+                     
+                       
+                   <!-- </section> -->
+   
+   
+   

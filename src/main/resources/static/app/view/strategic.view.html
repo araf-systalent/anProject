@@ -1,0 +1,171 @@
+
+
+                    <!-----------------------Wraper-------------------->
+
+
+                    <div class="wrapper">
+                    
+                    <div class="col-lg-12 simulation-colom">
+                    
+                    <div id="parentHorizontalTab">
+            <ul class="resp-tabs-list hor_1">
+                
+                <li>Sensitivity</li>
+                <li>Additional Days</li>
+            </ul>
+            <div class="resp-tabs-container hor_1">
+          
+                <div>
+                   <div class="col-lg-12" style="padding:0px;"> 
+                <div class="col-lg-6" style="padding:0px;"> <h3>Price Structure Sensitivity Heat Map</h3></div> 
+                <div class="col-lg-6" style="padding:0px;"> 
+                
+                <div class="box-filter pull-right">
+                 <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Select Verticals</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>  
+                  
+                  </div> 
+                  
+                  <div class="box-filter pull-right" style="margin-right:15px;">
+                 <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Select Client</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>  
+                  
+                  </div> 
+                  </div>  
+                  </div>
+                
+                <div class="col-lg-12 bubble-chart">
+                
+                <img src="../images/buble.jpg" class="img-responsive"/>
+                
+                
+
+                </div>
+                </div>
+                 <!----------------------tab2---------------------->
+                <div>
+                
+                <div class="col-lg-6" style="padding:0px;"> <h3>Additional Rental Day Value </h3></div>
+                
+                <div class="col-lg-6" style="padding:0px;"> 
+                
+                <div class="box-filter pull-right">
+                 <select class="form-control" id="exampleFormControlSelect1">
+                  <option>SelectCat-Class</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>  
+                  
+                  </div> 
+                  
+                   
+                  </div>
+                 
+                 <div class="col-lg-10 col-sm-12" style="padding:0px;margin-top:30px;">
+                 
+                 <div class="col-sm-4">
+                 
+                 <div class="ash">
+                 <div class="ash-value"><label>$345/Day</label></div>
+               	<div class="ash-des">Est. adj revenue</div>
+                
+                 </div>
+                 
+                 </div>
+                 
+                 
+                 <div class="col-sm-4">
+                 
+                 <div class="ash">
+                 <div class="ash-value"><label>$50/Day</label></div>
+               	<div class="ash-des">Variable cost </div>
+                
+                 </div>
+                 
+                 </div>
+                 
+                 </div>  
+                
+                 <div class="col-md-12 metrix-chart">
+                 <img src="../images/metrix.jpg" class="img-responsive"/>
+                  
+                 </div>
+                
+                </div>
+
+
+            </div>
+        </div>
+                    
+                    
+                    
+                    
+                    
+                    </div>
+                       
+
+                    </div>
+                    
+              
+         	<!--Responsive tab script start-->
+    
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+   
