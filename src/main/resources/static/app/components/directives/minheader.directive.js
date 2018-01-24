@@ -5,9 +5,9 @@
         .module('app')
         .directive('minHeader', MinHeader);
       
-        MinHeader.$inject = ['site.config','$rootScope','$timeout','$location'];
+        MinHeader.$inject = ['$rootScope','$timeout','$location'];
       
-      function MinHeader(SiteConfig, $rootScope, $timeout, $location) {
+      function MinHeader( $rootScope, $timeout, $location) {
     
         // Definition of directive
         var directiveDefinitionObject = {
@@ -18,12 +18,14 @@
         };
         
         function SiteBarLink(scope){
-            scope.AppName = SiteConfig.APP_NAME;
-            scope.ProjectList = SiteConfig.PROJECTS;
-            scope.SubMenuActive = false;
-            
+            scope.isLogged=$rootScope.isLogged
+            scope.logOutApp=function(){
+                console.log("logout");
+                $location.path('/login');
+            };
             
         }
+        
 
         function smMenuClick() {
           animateBarIcon('fa-bars', 'fa-bars');

@@ -5,26 +5,50 @@
     .module('app')
     .directive('sideBar', SideBar);
   
-  SideBar.$inject = ['site.config','$rootScope','$timeout','$location',];
+  SideBar.$inject = ['$rootScope','$timeout','$location',];
   
-  function SideBar(SiteConfig, $rootScope, $timeout, $location) {
+  function SideBar( $rootScope, $timeout, $location) {
 
     // Definition of directive
     var directiveDefinitionObject = {
       restrict: 'A',
-	  scope : false,
+	  scope : true,
       templateUrl: 'app/components/directives/sidebar.tmpl.html',
 	  link : SiteBarLink 
     };
 	
 	function SiteBarLink(scope){
-		scope.AppName = SiteConfig.APP_NAME;
-		scope.ProjectList = SiteConfig.PROJECTS;
-		scope.SubMenuActive = false;
-		
+
+    scope.menuLsit=$rootScope.menuLsit;
+    scope.isLogged=$rootScope.isLogged;
+    scope.isActivePage=function(pageurl){
+      var path =$location.path();
+     
+      if(scope.isActive(pageurl)){
+        return "dropdown-submenu headerBg3";
+      }
+      else{
+        return "";
+      }
+  };
+
+  scope.isActive=function(pageurl){
+    var path =$location.path();
+    if(path=='/' && pageurl=='simulation' ){
+      return true;
+    }
+    if(path=='/'+pageurl){
+      return true;
+    }
+    else{
+      return false;
+    }
+};
 		
 	}
     return directiveDefinitionObject;
+
+    
   }
   
   

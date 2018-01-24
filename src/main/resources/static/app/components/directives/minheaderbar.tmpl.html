@@ -1,5 +1,5 @@
 
-    <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" id="mobileMenu" ng-click="smMenuClick()">
+    <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" id="mobileMenu">
         <!--<i class="fa fa-bars"></i>-->
         <i id="icon" class="fa fa-bars"></i>
     </a>
@@ -16,6 +16,6 @@
         </li>
         <li>
             <!--     <a href="#" ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout</a>-->
-            <a href="j_spring_security_logout"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout </a>
+            <a ng-click="logOutApp()"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout </a>
         </li>
     </ul>
