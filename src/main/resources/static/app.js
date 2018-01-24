@@ -12,12 +12,28 @@
             .when('/', {
                 controller: 'HomeController',
                 templateUrl: 'home/home.view.html',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                resolve:{
+                    dropDownresponse:function(RunSimulationDropdownService){
+                        return RunSimulationDropdownService.runSimulationDropdownData()
+                        .then(function (data) {
+                           return data;
+                        });
+                    }
+                }
             })
             .when('/simulation', {
                 controller: 'HomeController',
                 templateUrl: 'home/home.view.html',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                resolve:{
+                    dropDownresponse:function(RunSimulationDropdownService){
+                        return RunSimulationDropdownService.runSimulationDropdownData()
+                        .then(function (data) {
+                           return data;
+                        });
+                    }
+                }
             })
 
 
@@ -33,7 +49,7 @@
                 controllerAs: 'vm'
             })
 
-            .otherwise({ redirectTo: '/login' });
+            .otherwise({ redirectTo: '/' });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookies', '$http','UserService','LoggedUserService'];

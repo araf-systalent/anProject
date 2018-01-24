@@ -5,23 +5,21 @@
     .module('app')
     .directive('sideBar', SideBar);
   
-  SideBar.$inject = ['site.config','$rootScope','$timeout','$location',];
+  SideBar.$inject = ['$rootScope','$timeout','$location',];
   
-  function SideBar(SiteConfig, $rootScope, $timeout, $location) {
+  function SideBar( $rootScope, $timeout, $location) {
 
     // Definition of directive
     var directiveDefinitionObject = {
       restrict: 'A',
-	  scope : false,
+	  scope : true,
       templateUrl: 'app/components/directives/sidebar.tmpl.html',
 	  link : SiteBarLink 
     };
 	
 	function SiteBarLink(scope){
-		scope.AppName = SiteConfig.APP_NAME;
-		scope.ProjectList = SiteConfig.PROJECTS;
-		scope.SubMenuActive = false;
-		
+
+		scope.menuLsit=$rootScope.menuLsit;
 		
 	}
     return directiveDefinitionObject;

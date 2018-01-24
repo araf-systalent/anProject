@@ -5,13 +5,13 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope','$scope','RunSimulationDropdownService'];
-    function HomeController(UserService, $rootScope,$scope,RunSimulationDropdownService) {
+    HomeController.$inject = ['UserService', '$rootScope','$scope','$http','RunSimulationDropdownService','dropDownresponse'];
+    function HomeController(UserService, $rootScope,$scope,$http,RunSimulationDropdownService,dropDownresponse) {
         var vm = this;
-        vm.catClass=[];
-        vm.clientGroup=[];
-        vm.priceStructure=[];
-        vm.user = null;
+        $rootScope.catClass=[];
+        $rootScope.clientGroup=[];
+        $rootScope.priceStructure=[];
+        $rootScope.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
         initController();
@@ -31,12 +31,14 @@
         }
 
         function loadDropDownData(){
-            $scope.runSimulationDropdown=null;
-             var dropDownresponse=RunSimulationDropdownService.runSimulationDropdownData();
-             RunSimulationDropdownService.runSimulationDropdownData()
-             .then(function (data) {
-                setDropdownElementDatas(data);
-             });
+
+            setDropdownElementDatas(dropDownresponse);
+            // $scope.runSimulationDropdown=null;
+            //  var dropDownresponse=RunSimulationDropdownService.runSimulationDropdownData();
+            //  RunSimulationDropdownService.runSimulationDropdownData()
+            //  .then(function (data) {
+            //     setDropdownElementDatas(data);
+            //  });
             
         }
 
