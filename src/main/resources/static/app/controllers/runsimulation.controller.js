@@ -12,16 +12,11 @@
         $rootScope.clientGroup=[];
         $rootScope.priceStructure=[];
         $rootScope.pageHeader="Run simulation";
-        $rootScope.user = null;
-        vm.allUsers = [];
-        vm.deleteUser = deleteUser;
         initController();
        
         function initController() {
 
             try {
-                loadCurrentUser();
-                loadAllUsers();
                 loadDropDownData();
             }
             catch(err) {
@@ -30,10 +25,6 @@
             }
             
         }
-
-        function logOutApp(){
-            $location.path('/login');
-           }
 
         function loadDropDownData(){
 
@@ -56,27 +47,6 @@
                 if ($.inArray(e, result) == -1) result.push(e);
             });
             return result;
-        }
-
-        function loadCurrentUser() {
-            UserService.GetByUsername($rootScope.globals.currentUser.username)
-                .then(function (user) {
-                    vm.user = user;
-                });
-        }
-
-        function loadAllUsers() {
-            UserService.GetAll()
-                .then(function (users) {
-                    vm.allUsers = users;
-                });
-        }
-
-        function deleteUser(id) {
-            UserService.Delete(id)
-            .then(function () {
-                loadAllUsers();
-            });
         }
     }
 
