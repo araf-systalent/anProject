@@ -1,0 +1,1216 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .single-chart{
+        height:403px !important;
+        margin-bottom:2px !important;
+    }
+
+    .single-chart-image{
+        height:302px !important;
+    }
+    .wardOcuupancyLineChartHeight{
+        padding:0px;
+    }
+   
+    .ccDdlStyle {
+    padding-left: Calc(50% - 94px) !important;
+}
+    .bed-number2{
+padding-top: 18px;
+    }
+    .new-number2-con {
+    padding-top:17px;
+    }
+
+    .paContent{
+        padding:0px;
+    }
+    .single-chart-image{
+        height:216px;
+    }
+    .paContainer{
+        padding:0px;
+    }
+    .percent-colom{
+        /*margin-bottom:30px;*/
+        line-height:100px;
+    }
+    .paContainer{
+        padding:0px;
+    }
+
+    .chartMargins{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .optimalWrapper{
+        padding: 20px 15px 9px 15px;
+        margin-top: 51px;
+        overflow: hidden;
+    }
+
+    .wardFilter-customMargin{
+        margin-top:5px !important;
+    }
+    .m-r-none-custom{
+        padding: 3px 0px 5px 0px !important;
+    }
+
+    .optimalMobileheader{
+        margin-bottom: 5px !important;
+    }
+
+    .serviceLevelFirstContainer{
+        height: 804px !important;
+    }
+
+    .band-graph {
+    /*margin-top: 35px;
+    margin-bottom: 35px;*/
+    height: 250px;
+    padding: 0px;
+}
+
+    .stat-ocuu-2{
+        height:423px !important;
+    }
+    .largemap {
+    margin-top: 91px !important;
+}
+    .wardOcuupancyLineChartHeight{
+            height : 300px !important;
+        }
+    .tabHeaderStyle{
+        font-size:11px;
+    }
+    #righTabStrip{
+        height:662px;
+    }
+    .lowHightMargin{
+        margin-top:31px !important;
+    }
+
+    .bottom-head-bed{
+        margin-top:31px !important;
+    }
+	 .csp-chart h4{
+         font-size:11px !important;
+	 }
+    .bed-Comments{
+        margin-top:20px !important;
+    }
+    .bed-Planningheader{
+        font-size:15px;
+        text-align:center;
+    }
+    .nav-primary>ul>li>a{
+        font-size:10px;
+    }
+    .vbox > section,
+        .vbox > footer {
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            width: 100%;
+        }
+    .colom-filter {
+        margin-top: 10px;
+    }
+
+    .colom-filter2 {
+        margin: auto;
+        width: 250px;
+    }
+
+    .m-t {
+    margin-top: 3px;
+	font-size:13px;
+	padding-left:0px;
+	text-align:center;
+	padding-right:7px;
+}
+
+    .m-r-none {
+        margin-right: 0;
+        background: #FFF;
+        padding: 10px 0px 10px 0px;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .wrapper {
+        padding: 15px;
+        margin-top: 83px;
+    }
+
+    .chart-colom {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        height: 317px;
+        border: 1px solid #ADB3DD;
+    }
+
+    .chart-head h1 {
+        color: #636363;
+        font-size: 14px;
+        text-transform: none;
+    }
+
+    .chart-head li {
+        display: inline;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+
+    .chart-image {
+        height: 217px;
+    }
+
+    .myButton {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0058bc), color-stop(1, #003090));
+        background: -moz-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -webkit-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -o-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -ms-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: linear-gradient(to bottom, #0058bc 5%, #003090 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0058bc', endColorstr='#003090',GradientType=0);
+        background-color: #0058bc;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #000000;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 13px;
+        padding: 18px 10px 16px 10px;
+        text-decoration: none;
+        text-align: center;
+        width: 122px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+        .myButton:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #003090), color-stop(1, #0058bc));
+            background: -moz-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -webkit-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -o-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -ms-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: linear-gradient(to bottom, #003090 5%, #0058bc 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003090', endColorstr='#0058bc',GradientType=0);
+            background-color: #003090;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+
+    /*----------------button 2--------------*/
+
+    .myButton2 {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fafafc), color-stop(1, #e0deec));
+        background: -moz-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -webkit-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -o-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -ms-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: linear-gradient(to bottom, #fafafc 5%, #e0deec 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafc', endColorstr='#e0deec',GradientType=0);
+        background-color: #fafafc;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #d1d1d1;
+        display: inline-block;
+        cursor: pointer;
+        color: #404040;
+        font-family: Arial;
+        font-size: 13px;
+        text-decoration: none;
+        text-align: center;
+        width: 122px;
+        height: 60px;
+        padding: 18px 10px 16px 10px;
+    }
+
+        .myButton2:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e0deec), color-stop(1, #fafafc));
+            background: -moz-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -webkit-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -o-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -ms-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: linear-gradient(to bottom, #e0deec 5%, #fafafc 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0deec', endColorstr='#fafafc',GradientType=0);
+            background-color: #e0deec;
+        }
+
+        .myButton2:active {
+            position: relative;
+            top: 1px;
+        }
+
+    .all-pat {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
+    
+.horz-button li{
+	display:inline;
+	list-style:none;
+	padding-right:2px;
+	
+}
+
+/*bed planning*/
+.cspchart-head h1 {
+    color: #4a4a4a;
+    font-size: 15px;
+    text-transform: none;
+	text-align:center;
+	font-weight:bold;
+	padding-left:0px;
+}
+
+.csp{
+	
+	padding:0px 30px 0px 45px;
+	margin-bottom:25px;
+}
+
+/*revised design css changes*/
+
+.occupancy h4{
+		text-align:center;
+		color:#4a4a4a;
+		font-weight:bold;
+		font-size:15px;
+		line-height:20px;
+		
+	}
+
+
+/*23-9-2016 new design*/
+
+.overall{
+	
+	width:135px;
+	height:auto;
+	margin:auto;
+}
+
+.minimi{
+border-left:0px solid#ccc;
+	
+}
+
+.cardio-colom2{
+	
+	padding:0px;
+	
+}
+
+
+.cardio-colom3{
+	
+	padding:0px;
+	
+}
+
+.cardio-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:660px;
+	
+}
+.beds-new-colom2 {
+    height: 54px;
+    width: 100px;
+	margin:auto;
+}
+.assi-colom2 {
+    height: 54px;
+    width: 140px;
+	margin:auto;
+	
+}
+.access-level {
+    
+    height: 116px;
+    width: 139px;
+	margin:auto;
+	/*margin-bottom: 34px;*/
+}
+.typical h4{
+	text-align:center;
+	
+}
+.minimi h4{
+	text-align:center;
+	
+}
+.long-graph{
+    padding:0px;
+    margin:0px;
+/*margin-top:25px;*/	
+}
+/*-------------------------multipages----------------------*/
+
+.ocupancy-head h4{
+	
+	 color: #636363;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: normal;
+	text-align:center;
+}
+
+
+.both-beds{
+	/*width:200px;
+	height:198px;*/
+	margin:auto;
+}
+
+.new-cardio-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:850px;
+	
+}
+
+/*3-1-2016*/
+
+
+.colom-occupancy{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:873px;
+	
+}
+
+.access-patient-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:725px;
+	
+}
+
+.dec p{
+	font-size:14px;
+	color:#636363;
+	font-weight:normal;
+	
+}
+
+  .bed-PlanningChart {
+            height: 200px;
+			/*border:1px solid#ccc;*/
+        }
+		
+		.cath-button {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+	
+	.monday-colom{
+	
+	border:1px solid#dedee8;
+	padding:10px 12px;
+	float:left;
+	width:88%;
+}
+
+
+/*----------------------------------------new scheduling css--------------------------------------------*/
+
+
+.new-optimal-colom{
+	
+	background:#fff;
+	padding-left:0px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:1102px;
+	
+}
+
+	.responsive-tabs.tabs>div.content{
+	padding:15px;
+	background:#fff;
+	border:1px solid #e1e1e1;
+	height:auto;
+	
+	}
+
+
+.tree-graph{
+	margin-bottom:20px;
+	height:200px;
+}
+
+
+.current-stat h5{
+	color:#4a4a4a;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:0px;
+	text-align:center;
+	margin-top:20px;
+	
+}
+
+
+.current-stat-alter{
+	color:#4a4a4a;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:0px;
+	text-align:center;
+	margin-top:20px;
+	
+}
+
+.content h4{
+	font-size:19px;
+	color:#4a4a4a;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+.pull-right {
+    float: right;
+    margin-top: 15px;
+}
+
+.bed-daily{
+	border-left:0px solid #e3e3e3;
+	
+	
+	}
+
+
+
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .band-graph {
+    height: 250px;
+    padding: 0px;
+}
+     .bed-number2{
+padding-top: 18px;
+    }
+    .new-number2-con{
+        padding-top:19px;
+    }
+    .paContent{
+        padding:0px;
+    }
+    .paContainer{
+        padding:0px;
+    }
+     .percent-colom{
+        /*margin-bottom:30px;*/
+        line-height:100px;
+    }
+    .chartMargins{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .optimalWrapper{
+        padding: 20px 15px 9px 15px;
+        margin-top: 65px;
+        overflow: hidden;
+    }
+
+    .wardFilter-customMargin{
+        margin-top:5px !important;
+    }
+    .m-r-none-custom{
+        padding: 3px 0px 5px 0px !important;
+    }
+
+    .optimalMobileheader{
+        margin-bottom: 5px !important;
+    }
+    .serviceLevelFirstContainer{
+        height: 765px !important;
+    }
+    .stat-ocuu-2{
+        height:423px !important;
+    }
+    .largemap {
+    margin-top: 91px !important;
+}
+    .wardOcuupancyLineChartHeight{
+            height : 300px !important;
+        }
+    .tabHeaderStyle{
+        font-size:14px;
+    }
+    #righTabStrip{
+        height:662px;
+    }
+    .lowHightMargin{
+        margin-top:31px !important;
+    }
+    .bottom-head-bed{
+        margin-top:31px !important;
+    }
+	.csp-chart h4{
+         font-size:11px !important;
+	 }
+    .bed-Comments{
+        margin-top:20px !important;
+    }
+    .bed-Planningheader{
+        font-size:19px;
+        text-align:center;
+    }
+    .vbox > section,
+        .vbox > footer {
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            width: 100%;
+        }
+     .nav-primary>ul>li>a{
+        font-size:10px;
+    }
+
+      .nav-primary>ul>li>a>span{
+        display:inherit;
+    }
+
+   .chart-image{
+	   height: 147px;
+   }
+    .colom-filter {
+        margin-top: 10px;
+    }
+
+    .colom-filter2 {
+        margin: auto;
+        width: 250px;
+    }
+
+    .m-t {
+    margin-top: 3px;
+	font-size:15px;
+	padding-left:0px;
+	text-align:center;
+	padding-right:7px;
+}
+
+    .m-r-none {
+        margin-right: 0;
+        background: #FFF;
+        padding: 10px 0px 10px 0px;
+        position: static;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .wrapper {
+        padding: 15px;
+        margin-top: 84px;
+    }
+
+    .single-chart{
+        height:500px !important;
+        margin-bottom:0px;
+    }
+
+    .single-chart-image{
+        height:405px;
+    }
+
+    .chart-colom {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        height: 247px;
+        border: 1px solid #ADB3DD;
+    }
+
+    .chart-head h1 {
+        color: #636363;
+        font-size: 14px;
+        text-transform: none;
+    }
+
+    .chart-head li {
+        display: inline;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+
+    .myButton {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0058bc), color-stop(1, #003090));
+        background: -moz-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -webkit-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -o-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: -ms-linear-gradient(top, #0058bc 5%, #003090 100%);
+        background: linear-gradient(to bottom, #0058bc 5%, #003090 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0058bc', endColorstr='#003090',GradientType=0);
+        background-color: #0058bc;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #000000;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 13px;
+        padding: 18px 10px 16px 10px;
+        text-decoration: none;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+        .myButton:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #003090), color-stop(1, #0058bc));
+            background: -moz-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -webkit-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -o-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: -ms-linear-gradient(top, #003090 5%, #0058bc 100%);
+            background: linear-gradient(to bottom, #003090 5%, #0058bc 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003090', endColorstr='#0058bc',GradientType=0);
+            background-color: #003090;
+            color: #FFF;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+
+    /*----------------button 2--------------*/
+
+    .myButton2 {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fafafc), color-stop(1, #e0deec));
+        background: -moz-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -webkit-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -o-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: -ms-linear-gradient(top, #fafafc 5%, #e0deec 100%);
+        background: linear-gradient(to bottom, #fafafc 5%, #e0deec 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafc', endColorstr='#e0deec',GradientType=0);
+        background-color: #fafafc;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #d1d1d1;
+        display: inline-block;
+        cursor: pointer;
+        color: #404040;
+        font-family: Arial;
+        font-size: 13px;
+        text-decoration: none;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 18px 10px 16px 10px;
+    }
+
+        .myButton2:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e0deec), color-stop(1, #fafafc));
+            background: -moz-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -webkit-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -o-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: -ms-linear-gradient(top, #e0deec 5%, #fafafc 100%);
+            background: linear-gradient(to bottom, #e0deec 5%, #fafafc 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0deec', endColorstr='#fafafc',GradientType=0);
+            background-color: #e0deec;
+        }
+
+        .myButton2:active {
+            position: relative;
+            top: 1px;
+        }
+
+    .horz-button li {
+        display: inline;
+        list-style: none;
+        padding-right: 0px;
+    }
+
+
+
+
+
+
+    .all-pat {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+	
+	/*bed planning*/
+. csp-chart-colom .col-md-6, .col-sm-12{
+	  padding : 15px !important;
+	 }
+	 
+.cspchart-head h1 {
+    color: #4a4a4a;
+    font-size: 18px;
+    text-transform: none;
+	text-align:center;
+	font-weight:bold;
+	padding-left:0px;
+}
+
+.csp{
+	
+	padding:0px 30px 0px 70px;
+	margin-bottom:25px;
+}
+
+/*23-9-2016 new design*/
+
+.overall{
+	
+	width:135px;
+	height:auto;
+	margin:auto;
+}
+
+.minimi{
+border-left:0px solid#ccc;
+	
+}
+
+.cardio-colom2{
+	
+	padding:0px;
+	
+}
+
+
+.cardio-colom3{
+	
+	padding:0px;
+	
+}
+
+.cardio-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:640px;
+	
+}
+.beds-new-colom2 {
+    height: 54px;
+    width: 100px;
+	margin:auto;
+}
+.assi-colom2 {
+    height: 54px;
+    width: 140px;
+	margin:auto;
+	
+}
+.access-level {
+    
+    height: 116px;
+    width: 139px;
+	margin:auto;
+	/*margin-top:22px;*/
+    /*margin-bottom: 40px;*/
+}
+.typical h4{
+	text-align:center;
+	
+}
+.minimi h4{
+	text-align:center;
+	
+}
+.long-graph{
+/*margin-top:25px;*/	
+}
+
+
+/*-------------------------multipages----------------------*/
+
+.ocupancy-head h4{
+	
+	 color: #636363;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: normal;
+	text-align:center;
+}
+
+
+.both-beds{
+	/*width:200px;
+	height:198px;*/
+	margin:auto;
+}
+
+.new-cardio-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:850px;
+	
+}
+/*3-1-2016*/
+
+.colom-occupancy{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:873px;
+	
+}
+.access-patient-colom{
+	
+	background:#fff;
+	padding:15px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:725px;
+	
+}
+.dec p{
+	font-size:14px;
+	color:#636363;
+	font-weight:normal;
+	
+}
+  .bed-PlanningChart {
+            height: 200px;
+			/*border:1px solid#ccc;*/
+        }
+		
+		.cath-button {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+	
+	/*----------------------------------------new scheduling css--------------------------------------------*/
+
+
+.new-optimal-colom{
+	
+	background:#fff;
+	padding-left:0px;
+	margin-bottom:15px;
+	border:1px solid#adb3dd;
+	height:1094px;
+	
+}
+
+	.responsive-tabs.tabs>div.content{
+	padding:15px;
+	background:#fff;
+	border:1px solid #e1e1e1;
+	height:auto;
+	
+	}
+
+
+.tree-graph{
+	margin-bottom:17px;
+	height:250px;
+}
+
+
+.current-stat h5{
+	color:#4a4a4a;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:0px;
+	text-align:center;
+	margin-top:20px;
+	
+}
+
+.current-stat-alter{
+	color:#4a4a4a;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:0px;
+	text-align:center;
+	margin-top:20px;
+	
+}
+
+.content h4{
+	font-size:19px;
+	color:#4a4a4a;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+.pull-right {
+    float: right;
+    margin-top: 15px;
+}
+.bed-daily{
+	border-left:0px solid #e3e3e3;
+	
+	
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+       .odd{
+            padding-right:0px !important;
+            padding-left:0px !important;
+        }
+
+        .even{
+            padding-right:0px !important;
+            padding-left:0px !important;
+        }
+
+        .m-t {
+    margin-top: 3px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+        .paContainerRight {
+    padding-left: 0px !important;
+}
+
+         .new-optimal-colom {
+    background: #fff;
+    padding-left: 0px;
+    /* margin-bottom: 15px; */
+    border: 1px solid#adb3dd;
+    height: 832px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+	
+	
+
+	
+	
+    .paDDl{
+        float: right;
+        margin-right: 130px;
+    }
+    .paContainer{
+        padding:0px;
+    }
+
+    .paContainerRight{
+        padding-left:15px;
+    }
+        .odd{
+            padding-right:0px !important;
+            padding-left:0px !important;
+        }
+
+        .even{
+            padding-right:0px !important;
+
+        }
+    .single-chart-image{
+        height: 535px !important;
+    }
+    .single-chart{
+        height:632px !important;
+    }
+.custom-y-axis {
+margin-top: Calc(100% + 115px) !important;
+}
+    .custom-y-axis-wrapper{
+        padding: 0px;
+    width: 10px;
+    height: 100%;
+    text-align: -webkit-right;
+    text-align: right;
+}
+    .custom-axis-margin{
+    margin-bottom:15px !important;
+}
+    #menuContainer ul {
+	   border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+            }
+    .optimalWrapper{
+        padding: 20px 15px 0px 15px;
+        margin-top: 54px;
+        overflow: hidden;
+    }
+
+    .wardFilter{
+       float:left !important;
+   }
+    .band-graph {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 250px;
+}
+    .wardOcuupancyLineChartHeight{
+            height : 560px !important;
+        }
+    .tabContentStyle{
+        /*margin-top:20px;*/
+    }
+    .tabHeaderStyle{
+        font-size:16px;
+    }
+    #righTabStrip{
+        height:582px;
+    }
+    .lowHightMargin{
+        margin-top:18px !important;
+    }
+
+    .bottom-head-bed{
+        margin-top:18px !important;
+    }
+        .bed-Planningheader{
+        text-align:center;
+    }
+        .bed-PlanningChart {
+            height: 275px;
+			/*border:1px solid#ccc;*/
+        }
+
+        .bed-Comments {
+            font-size: 15px;
+        }
+
+        .colom-filter {
+            margin-top: 0px;
+        }
+
+        .colom-filter2 {
+            padding-left: 0px;
+            width: auto;
+        }
+
+        .chart-colom {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            height: 500px;
+            border: 1px solid #ADB3DD;
+        }
+
+        .chart-image {
+            height: 400px;
+        }
+
+        .colom-filter2 {
+            margin: auto;
+            width: 260px;
+        }
+
+        .col-md-3 {
+            width: 25%;
+        }
+
+        .nv-y text {
+            font-size: 13px !important;
+        }
+    }
+
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .cardio-colom2 {
+    padding-right: 0px !important;
+}
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .single-chart {
+        height: 568px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .single-chart-image {
+        height: 478px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  
+	.summary-colom{
+	padding:0px 0px 0px 0px;
+	margin-top:15px;
+}
+
+.avch{
+	padding:0px;
+	
+}
+.spc-colom {
+    background: #FFF;
+    padding: 31px 15px;
+	margin-bottom:15px;
+}	
+	
+}
+
+@media screen and (max-width: 1024px){
+
+  .avch{
+	padding:0px;
+	margin-top:15px;
+	
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

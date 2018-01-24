@@ -1,0 +1,54 @@
+<link href="app-content/css/login.css" rel="stylesheet">
+    <div class="container">
+            <div class="card card-container">
+             <h1> <img src="app-content/images/BST_logo.png" alt="logo"/> </h1>
+             
+               
+                
+                <div class="login-block">
+                        <form name="form" ng-submit="vm.login()" role="form">
+                <div class="ur-colom" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                <div class="icon-colom"><img src="app-content/images/mail.png" alt="mail icon"/></div>
+                <div class="text-colom">
+                <!-- <input type="text" class="form-control" id="inputText" placeholder="Username"> -->
+                <input type="text" name="username" id="username" class="form-control" ng-model="vm.username" required placeholder="Username" />
+               
+                </div>
+               
+                </div>
+                <span ng-show="form.username.$dirty && form.username.$error.required"  style="    color: yellow;" class="help-block">Username is required</span>
+                 <div class="ur-colom">
+                <div class="icon-colom"><img src="app-content/images/key.png" alt="mail icon"/></div>
+                <div class="text-colom"  ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                    <!-- <input type="password" class="form-control" id="inputPassword" placeholder="Password"> -->
+                    <input type="password" name="password" id="password" class="form-control" ng-model="vm.password" required />
+                    
+                </div>
+                
+                </div>
+                <span ng-show="form.password.$dirty && form.password.$error.required" style="    color: yellow;" class="help-block">Password is required</span>
+            <!--    <div class="enter-user">You must enter Usernmae</div>
+                <div class="enter-user">You must enter Password</div>-->
+                
+                
+                 <button>LOGIN</button>
+                 </form>
+        <div class="for-pass">
+          <label>
+          <a href="#">Request Access</a>
+          </label>
+          </div>
+       
+       
+    </div>
+                   
+                
+                
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        

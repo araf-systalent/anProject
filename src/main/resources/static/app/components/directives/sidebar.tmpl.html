@@ -1,0 +1,18 @@
+
+	<ul class="nav"  ng-if="isLogged()">
+	
+			<li class=" " ng-class="isActivePage(menu.menuUrl)" ng-repeat="menu in menuLsit">
+					<a href="#!{{menu.menuUrl}}" class="menuTextAlign" ng-if="isActive(menu.menuUrl)">
+							<img src="app-content/images/hoverMenuIcons/hover_icon_{{menu.menuUrl}}.png" />
+							<span style="color:white;display: -moz-box;display: inherit;">{{menu.menuText}}</span>
+							</a>
+							<a  href="#!{{menu.menuUrl}}" class="menuTextAlign" ng-if="!isActive(menu.menuUrl)">
+								<img src="app-content/images/icon_{{menu.menuUrl}}.png" />
+								<span style="color:#000000;display: -moz-box;display: inherit;">{{menu.menuText}}</span>
+								</a>
+					
+				  </li>
+		
+
+
+	</ul>

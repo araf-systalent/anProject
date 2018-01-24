@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>United rental</title>
+    <base href="/">
+    <link href="app-content/css/pagestyle.css" rel="stylesheet">
+    <link href="app-content/css/inlinecss.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link href="app-content/app.css" rel="stylesheet" />
+   
+    <link href="app-content/css/bootstrap.min.css" rel="stylesheet"> -->
+     <!-- <link href="app-content/fonts/font-awesome.min.css" rel="stylesheet">
+     <link href="app-content/fonts/stylesheet.css" rel="stylesheet"> -->
+     <link href="app-content/css/easy-responsive-tabs.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.css" />
+     
+     
+</head>
+<body>
+        <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-success dker aside-sm nav-vertical" ng-if="isLogged()" id="nav">
+                    <section class="vbox">
+                       <header min-header  ng-if="isLogged()" class="bg-black nav-bar headerBg"></header>
+                        <section>
+                            <!-- nav -->
+                            <nav side-bar  ng-if="isLogged()" class="nav-primary hidden-xs nav-off-screen" id="menuContainer">
+                                
+                            </nav>
+                        </section>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                 <!-- /.vbox -->
+                <section id="content">
+                    <section class="vbox">
+                     
+                        <header full-header  ng-if="isLogged()" class="header bg-black navbar navbar-inverse headerBg2">
+                        
+                        </header>
+                        <div ng-view></div>
+                    </section>
+                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+                </section>
+            </section>
+            <!-- <div ng-view i-sref-opts="{reload: true}"></div> -->
+            
+       
+  
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-3.1.1.min.js"></script> -->
+    <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
+    <script type="text/javascript"  src="app-content/js/easyResponsiveTabs.js"></script>
+    <script type="text/javascript"  src="app-content/js/bootstrap-checkbox.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script type="text/javascript" src="app-services/config.js"></script>
+    <script type="text/javascript" src="app-services/runSimulation.service.js"></script>
+    <script src="app-services/user.service.local-storage.js"></script>
+    <script src="app-services/logged.user.service.js"></script>
+
+    <script type="text/javascript" src="app/components/directives/sidebar.directive.js"></script>
+    <script type="text/javascript" src="app/components/directives/fullheader.directive.js"></script>
+    <script type="text/javascript" src="app/components/directives/minheader.directive.js"></script>
+
+    <!-- Real user service that uses an api -->
+    <!-- <script src="app-services/user.service.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    
+    <script src="app-content/js/bootstrap.min.js"></script>
+    <!-- Fake user service for demo that uses local storage -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript"  src="app-content/js/jquery.pjax.js"></script>  -->
+    <!-- <script type="text/javascript"  src="app-content/js/jquery-3.1.0.min.js"></script>  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script type="text/javascript"  src="app-content/js/iconate.js"></script>
+    <script type="text/javascript"  src="app-content/js/jquery.spinner.min.js"></script>
+   
+
+    <script type="text/javascript"  src="app-content/js/moment.min.js"></script>
+    
+    <!-- <script src="home/home.controller.js"></script> -->
+    <script src="app/controllers/login.controller.js"></script>
+
+    <script src="app/controllers/runsimulation.controller.js"></script>
+    <script src="app/controllers/scenarioanalysis.controller.js"></script>
+    <script src="app/controllers/simulationanalysis.controller.js"></script>
+    <script src="app/controllers/strategicanalysis.controller.js"></script>
+  
+</body>
+</html>
