@@ -11,7 +11,7 @@
         $routeProvider
             .when('/', {
                 controller: 'RunSimulation',
-                templateUrl: 'home/home.view.html',
+                templateUrl: 'app/view/RunSimulation.view.html',
                 controllerAs: 'vm',
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
@@ -24,7 +24,7 @@
             })
             .when('/simulation', {
                 controller: 'RunSimulation',
-                templateUrl: 'home/home.view.html',
+                templateUrl: 'app/view/RunSimulation.view.html',
                 controllerAs: 'vm',
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
@@ -43,7 +43,7 @@
             })
             .when('/strategic-analysis', {
                 controller: 'StrategicAnalysis',
-                templateUrl: 'app/view/simulationAnalysis.view.html',
+                templateUrl: 'app/view/strategic.view.html',
                 controllerAs: 'vm'
             })
             .when('/scenarios', {
@@ -64,9 +64,10 @@
 
     }
 
-    run.$inject = ['$rootScope', '$location', '$cookies', '$http','UserService','LoggedUserService'];
-    function run($rootScope, $location, $cookies, $http,UserService,LoggedUserService) {
+    run.$inject = ['$rootScope', '$location', '$cookies', '$http','UserService','LoggedUserService','site.config'];
+    function run($rootScope, $location, $cookies, $http,UserService,LoggedUserService,SiteConfig) {
         // keep user logged in after page refresh
+        $rootScope.ApiBaseUrl=SiteConfig.SIMULATION_API_BASE;
         $rootScope.globals = $cookies.getObject('globals') || {};
         if ($rootScope.globals.currentUser) {
             $http.defaults.headers.common['Authorization'] = 'Bearer '+$rootScope.globals.authResult.token;

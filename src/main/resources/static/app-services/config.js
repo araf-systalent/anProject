@@ -11,21 +11,16 @@
   angular
   	.module('app')
     .constant('site.config', {
-      'APP_NAME': 'HMZ Admin',
+      'APP_NAME': 'United Rental',
 	  'SERVER' : {
 			'NAME': 'serverNamedd',
-			'START_DATE': '2016-06-03',
-			'END_DATE': '2016-06-16'
+			'START_DATE': '2018-01-15',
+			'END_DATE': '---'
 	  },
       'SEVERITYLIST':[{'name':'Very High','value':'VERY_HIGH'},{'name':'High','value':'HIGH'},{'name':'Medium','value':'MEDIUM'},{'name':'Low','value':'LOW'}],	  
-	  'DASHBOARD_API_URL' : 'rest/dashboard_back_end_response.json',
-	  'SYSTEMHEALTH_API_URL' : 'rest/system_health_report_response.json',
-	  'PROJECTS' : [{'name': 'Project A','url':'http://somename.com/projects/projectA'},
-					{'name': 'Project B','url':'http://somename.com/projects/projectB'},
-					{'name': 'Project C','url':'http://somename.com/projects/projectC'},
-					{'name': 'Project D','url':'http://somename.com/projects/projectD'},
-					{'name': 'Project E','url':'http://somename.com/projects/projectE'},
-					{'name': 'Project F','url':'http://somename.com/projects/projectF'}]
+	  'SIMULATION_API_BASE' : 'http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/',
+	  
+	  
     });
 
 })();

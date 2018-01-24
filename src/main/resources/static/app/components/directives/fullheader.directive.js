@@ -5,9 +5,9 @@
         .module('app')
         .directive('fullHeader', FullHeader);
       
-        FullHeader.$inject = ['site.config','$rootScope','$timeout','$location'];
+        FullHeader.$inject = ['site.config','$rootScope','$timeout','$location','AuthenticationService'];
       
-      function FullHeader(SiteConfig, $rootScope, $timeout, $location) {
+      function FullHeader(SiteConfig, $rootScope, $timeout, $location,AuthenticationService) {
     
         // Definition of directive
         var directiveDefinitionObject = {
@@ -23,6 +23,7 @@
             scope.SubMenuActive = false;
             scope.logOutApp=function(){
                 console.log("logout");
+                AuthenticationService.ClearCredentials();
                 $location.path('/login');
                 console.log('$location',$location.path());
             };

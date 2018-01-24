@@ -16,14 +16,14 @@
         return service;
 
         function Login(username, password, callback) {
-
+           var apiBaseUrl=$rootScope.ApiBaseUrl;
             if(username!='test_user_1'){
                 var response = { success: false, message: 'Username or password is incorrect' };
                 callback(response);
             }
             else{
                 $http({
-                    url : "http://ec2-54-70-140-59.us-west-2.compute.amazonaws.com:8080/api/auth",
+                    url : apiBaseUrl+"api/auth",
                     method : 'POST',
                     transformResponse: [function (data) {
                         // Do whatever you want!
@@ -31,10 +31,11 @@
                     }],
                     headers : {
                            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo'
+                           //Authorization: 'Bearer '+generateJWT(username,password)
                     }
                   }).then(function(htppResponse){
                     //success code
-                    console.log(response);
+                   
                     var response = { success: true ,data:htppResponse.data.data};
                     callback(response);
                 }, function(httpResponse){
@@ -48,7 +49,7 @@
 
         function successCallback(htppResponse){
             //success code
-            console.log(response);
+           
             var response = { success: true ,data:htppResponse.data};
             htppResponse.callBack(response);
         }
@@ -59,11 +60,7 @@
             htppResponse.callBack(response);
         }
 
-        function SetLoginAuthCredentials(){
-            $http.headers.Authorization='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzIjoicGFzc3dvcmQiLCJ1c2VyIjoidGVzdF91c2VyXzEiLCJpYXQiOjE1MTYxNDE1Nzd9.l3CHjafg69xJVVt_VKe31GqvoEOiuBOYHQ4lLJI1Umo';
-            //$http.defaults.headers.common['Authorization'] = 
-            
-        }
+    
 
         function SetCredentials(data){
             var datalist= data.split('.');
@@ -87,33 +84,58 @@
             $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
         }
 
-        // function SetCredentials(username, password) {
-        //     var authdata = Base64.encode(username + ':' + password);
-
-        //     $rootScope.globals = {
-        //         currentUser: {
-        //             username: username,
-        //             authdata: authdata
-        //         }
-        //     };
-
-        //     // set default auth header for http requests
-        //    // $http.defaults.headers.common['Authorization'] = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJTVEQiXSwidXNlciI6InRlc3RfdXNlcl8xIiwiaWF0IjoxNTE2MTQxNjExfQ.OZAv4BqkI8WYLVmoiF0nPOTG7DUDbgWHRRfIMiEsvvQ ';
-
-        //     // store user details in globals cookie that keeps user logged in for 1 week (or until they logout)
-        //     var cookieExp = new Date();
-        //     cookieExp.setDate(cookieExp.getDate() + 7);
-        //     $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
-        // }
-
         function ClearCredentials() {
             $rootScope.globals = {};
             $cookies.remove('globals');
             $http.defaults.headers.common.Authorization = 'Basic';
         }
+
+        // Defining our token parts
+
+        function generateJWT(userName,password){
+            var header = {"typ":"JWT","alg":"HS256"};
+              
+              var data = {
+                "pass": userName,
+                "user": password,
+                "iat": new Date().getTime()  // Wed Jan 17 2018 03:56:17 GMT+0530 (India Standard Time)
+              }
+              
+              var secret = "My very confidential secret!!!";//project secret
+              
+              
+              
+              var stringifiedHeader = CryptoJS.enc.Utf8.parse(JSON.stringify(header));
+              var encodedHeader = base64url(stringifiedHeader);
+              //document.getElementById("header").innerText = encodedHeader;
+              
+              var stringifiedData = CryptoJS.enc.Utf8.parse(JSON.stringify(data));
+              var encodedData = base64url(stringifiedData);
+              //document.getElementById("payload").innerText = encodedData;
+              
+              var signature = encodedHeader + "." + encodedData;
+              signature = CryptoJS.HmacSHA256(signature, secret);
+              signature = base64url(signature);
+              console.log(signature)
+              return encodedHeader+"."+encodedData+"."+signature
+        }
+
+        function base64url(source) {
+            // Encode in classical base64
+           var encodedSource = CryptoJS.enc.Base64.stringify(source);
+            
+            // Remove padding equal characters
+            encodedSource = encodedSource.replace(/=+$/, '');
+            
+            // Replace characters according to base64url specifications
+            encodedSource = encodedSource.replace(/\+/g, '-');
+            encodedSource = encodedSource.replace(/\//g, '_');
+            
+            return encodedSource;
+          }
     }
     
-
+    
     // Base64 encoding service used by AuthenticationService
     var Base64 = {
 
