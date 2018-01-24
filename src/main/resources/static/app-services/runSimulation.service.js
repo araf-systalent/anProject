@@ -19,13 +19,14 @@
         .module('app')
         .factory('RunSimulationService', RunSimulationService);
 
-        RunSimulationService.$inject =  ['$http'];
-    function RunSimulationService($http) {
+        RunSimulationService.$inject =  ['$http','$rootScope'];
+    function RunSimulationService($http,$rootScope) {
         var service = {};
-        service.runSimulationDropdownData=runSimulationDropdownData;
+        service.getDropDownData=runSimulationDropdownData;
         return service;
         function runSimulationDropdownData(){
-            return $http.get('app-content/run_simulation_dropdown.json').then(handleSuccess, handleError('Error getting runsimulation dropdown data'));
+            var apiBaseUrl=$rootScope.ApiBaseUrl;            
+            return $http.get(apiBaseUrl+'api/dropdowns/simulation').then(handleSuccess, handleError('Error getting runsimulation dropdown data'));
            
         } 
 

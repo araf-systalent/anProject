@@ -15,7 +15,7 @@
                 controllerAs: 'vm',
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
-                        return RunSimulationService.runSimulationDropdownData()
+                        return RunSimulationService.getDropDownData()
                         .then(function (data) {
                            return data;
                         });
@@ -28,7 +28,7 @@
                 controllerAs: 'vm',
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
-                        return RunSimulationService.runSimulationDropdownData()
+                        return RunSimulationService.getDropDownData()
                         .then(function (data) {
                            return data;
                         });
