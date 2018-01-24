@@ -1,0 +1,300 @@
+﻿
+        <script>
+                function smMenuClick() {
+                    animateBarIcon('fa-bars', 'fa-bars');
+                    if ($("#menuContainer").hasClass("hidden-xs")) {
+                        $("#menuContainer").toggleClass("hidden-xs");
+                        animateLeftMenu("0", 1);
+                    } else {
+                        animateLeftMenu("-115", 0.5);
+                    }
+                };
+            
+                function animateLeftMenu(left, opacity) {
+                    $("#menuContainer").animate({
+                        opacity: opacity,
+                        left: left,
+                    }, 500, function () {
+                        if (left != "0") {
+                            $("#menuContainer").toggleClass("hidden-xs");
+                        }
+                    });
+                }
+                function animateBarIcon(fromArrow, toArrow) {
+                    var iconElement = document.getElementById('icon');
+                    var options = {
+                        from: fromArrow,
+                        to: toArrow,
+                        animation: 'rotateClockwise'
+                    };
+            
+                    iconate(iconElement, options);
+                }
+                </script>
+    <input type="hidden" id="currentData"/>
+    <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-success dker aside-sm nav-vertical" id="nav">
+            <section class="vbox">
+                <header class="bg-black nav-bar headerBg">
+                    <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" id="mobileMenu" onClick="smMenuClick()">
+                        <!--<i class="fa fa-bars"></i>-->
+                        <i id="icon" class="fa fa-bars"></i>
+                    </a>
+                    <a href="#" class="nav-brand" data-toggle="fullscreen"><img src="app-content/images/logo.jpg" alt="logo" /></a>
+                    <a class="btn btn-link visible-xs" data-toggle="dropdown">
+                        <i class="fa fa-ellipsis-v" style="color:#FFF;"></i>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight" style="top: 47px;left: Calc(100% - 158px);">
+                        <li>
+                            <a href="#"><i class="fa fa-download" aria-hidden="true" style="padding-right:10px;"></i>Download Results</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-lock" aria-hidden="true" style="padding-right:10px;"></i>Change Passwor</a>
+                        </li>
+                        <li>
+                            <!--     <a href="#" ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout</a>-->
+                            <a href="j_spring_security_logout"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout </a>
+                        </li>
+                    </ul>
+                </header>
+                <section>
+                    <!-- nav -->
+                    <nav class="nav-primary hidden-xs nav-off-screen" id="menuContainer">
+                        <ul class="nav">
+                            <li class="dropdown-submenu headerBg3">
+                                <a href="#" class="menuTextAlign">
+                                    <img src="app-content/images/hoverMenuIcons/hover_icon_01.png" />
+                                   
+                                    <span style="color:white;display: -moz-box;display: inherit;">RUN SIMULATION</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="censusprediction" class="dropdown-toggle menuTextAlign">
+                                    <img src="app-content/images/icon_02.png" />
+                                 
+                                    <span style="display: -moz-box;display: inherit;">SIMULATION ANALYSIS</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a class="menuTextAlign">
+                                    <img src="app-content/images/icon_03.png" />
+                                  
+                                    <span style="display: -moz-box;display: inherit;">STRATEGIC ANALYSIS</span>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a href="#" class="menuTextAlign">
+                                    <img src="app-content/images/icon_04.png" />
+                                   
+                                    <span>SCENARIO ANALYSIS</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+        </aside>
+        <!-- /.aside -->
+        <!-- .vbox -->
+        <section id="content">
+            <section class="vbox">
+             
+                <header class="header bg-black navbar navbar-inverse headerBg2">
+                
+                         
+                  <div class="collapse navbar-collapse pull-in">
+                     <span style="color:#fff;font-size:20px;font-weight:600;margin-top:10px;">   Run simulation</span>   
+                        <ul class="nav navbar-nav navbar-right">
+                       
+                        <!--<li ><a href="#"><img src="../images/icon_file.png"/></a></li>
+                        <li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li>
+                        <li ><a href="#"><i class="fa fa-floppy-o" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>-->
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                     User ABC<i class="fa fa-user" style="color:#FFF;margin-left:10px;"></i>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInLeft">
+                                    <li>
+                                        <a href="#"><i class="fa fa-download" aria-hidden="true" style="padding-right:10px;"></i>Download Results</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-lock" aria-hidden="true" style="padding-right:10px;"></i>Change Password</a>
+                                    </li>
+                                    <li>
+                                        <!--  <a href="#" ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout</a>-->
+                                        <a href="j_spring_security_logout"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                 <section class="scrollable" id="pjax-container">
+                  <!--  <header>
+                        <div class="row b-b m-l-none m-r-none" style="position:fixed">
+                            <div class="col-lg-8 col-md-8 col-sm-5 col-xs-12">
+                                <h3 class="m-t m-b-none hidden-xs hidden-sm"></h3>
+                                <h3 class="m-t m-b-none visible-xs visible-sm" style="padding-right:0px;">BED PLANNING</h3>
+                            </div>
+                            
+                        </div>
+                    </header>-->
+
+
+                    <!-----------------------Wraper-------------------->
+
+
+                    <div class="wrapper">
+                        <div class="col-lg-4 col-md-4 col-sm-12" style="padding:0px;">
+                         <div class="colom-parametre">
+                         <h1>Parameters</h1>
+                         <div class="para-input">
+                         
+                         <div class="form-group row">
+                         <label for="inputEmail3" class="col-sm-4 col-form-label">Date Range</label>
+                         <div class="col-sm-3" style="padding-right:0px;">
+                         <input type="text" class="form-control" id="text">
+                        </div>
+                        
+                        <div class="col-sm-1 ot">to</div>
+                        <div class="col-sm-3" style="padding-right:0px;">
+                         <input type="text" class="form-control" id="text">
+                        </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                         <label for="inputEmail3" class="col-sm-4 col-form-label">Client Group</label>
+                         <div class="col-sm-8">
+                           <select class="form-control" id="exampleFormControlSelect1">
+                          <option>12975</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                         <label for="inputEmail3" class="col-sm-4 col-form-label">Cat-Class</label>
+                         <div class="col-sm-8">
+                           <select class="form-control" id="exampleFormControlSelect1">
+                          <option>120-87</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                         <label for="inputEmail3" class="col-sm-4 col-form-label">Price Structure</label>
+                         <div class="col-sm-8">
+                           <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Daily</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                         <label for="inputEmail3" class="col-sm-4 col-form-label">Price Level</label>
+                         <div class="col-sm-4">
+                          <div class="input-group spinner" data-trigger="spinner">
+                          <input type="text" class="form-control text-center" value="1" data-rule="quantity">
+                          <div class="input-group-addon">
+                            <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-up"></i></a>
+                            <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        
+                        <div class="form-group row">
+                        <div class="col-sm-12 run"><h1><button type="button" class="btn btn-warning">Run</button></h1></div>
+                        </div>
+                         
+                         </div>
+                       
+                         </div>   
+
+                        </div>
+                        
+                          
+                          
+                           <!-----------------------summary-------------------->
+                           
+                           
+                           
+                                                 
+                         <div class="col-lg-8 col-md-8 col-sm-12 summary-colom">
+                         <div class="md-12" style="background:#fff;padding-top:15px;"><h1>Summary Statistics</h1></div>
+                         
+                         <div class="col-md-12" style="padding:0px;">
+                         
+                         <div class="col-lg-4 col-md-12 col-sm-12" style="padding:0px;">
+                         
+                         <div class="col-sm-12 epc-colom">
+                         <div class="epc-value">+ $12,345  </div>
+                         <div class="epc-des">estimated profit chg</div>
+                         </div>
+                         
+                         <div class="col-sm-12 spc-colom">
+                         <div class="spc-value">+ $12,345  </div>
+                         <div class="spc-des">stdev profit chg</div>
+                         </div>
+                         
+                         </div>
+                         
+                         <div class="col-lg-8 col-md-12 avch">
+                         
+                         <div class="col-sm-12 avg-colom">
+                         <div class="avg-head"><h2>Avg chg in rental length</h2></div>
+                         <div class="avg-value"> +0.5 Days</div>
+                         </div>
+                         
+                         <div class="col-sm-12 avg-colom">
+                         <div class="avg-head"><h2>Rentals analysed</h2></div>
+                         <div class="avg-value">1500</div>
+                         </div>
+                         
+                         <div class="col-sm-12 avg-colom">
+                         <div class="avg-head"><h2>Days analysed </h2></div>
+                         <div class="avg-value"> 60</div>
+                         </div>
+                         
+                         </div>
+                         
+                         </div>
+                         
+                         <div class="col-md-12 col-sm-12 chart-graph" style="padding:15px;">
+                         <img src="app-content/images/demo_chart.jpg" alt="image" class="img-responsive"/>
+                         
+                         
+                         </div>
+                         
+                         
+
+                         </div>
+
+                    </div>
+                    
+                </section>
+            </section>
+            <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+        </section>
+    </section>

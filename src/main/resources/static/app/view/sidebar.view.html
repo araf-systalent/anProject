@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>run simulation</title>
+    
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <link href="../css/app.v2.css" rel="stylesheet" />
+    <link href="../fonts/stylesheet.css" rel="stylesheet" />
+    <link href="../css/phealth_responsive.css" rel="stylesheet" />
+    <link href="../css/nv.d3.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-spinner.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" class="ui" href="./css/style.css"> -->
+     
+     
+    <script src="../js/jquery-3.1.0.min.js"></script> 
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/d3.min.js"></script>
+    <script src="../js/moment.min.js"></script>
+    <script src="../js/nv.d3.js"></script>
+    <script src="../js/angular-nvd3.js"></script>
+    <!-- <script src="../js/bedplanning-Controller.js"></script> -->
+    <!-- <script src="../js/bedplanning-service.js"></script> -->
+    <script src="../js/iconate.js"></script>
+    <script src="../js/jquery.spinner.min.js"></script>
+    
+  
+    
+    <style>
+       
+    </style>
+    <script>
+
+    </script>
+</head>
+<body style="overflow:hidden;">
+    <input type="hidden" id="currentData"/>
+    <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-success dker aside-sm nav-vertical" id="nav">
+            <section class="vbox">
+                <header class="bg-black nav-bar headerBg">
+                    <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" id="mobileMenu" onClick="smMenuClick()">
+                        <!--<i class="fa fa-bars"></i>-->
+                        <i id="icon" class="fa fa-bars"></i>
+                    </a>
+                    <a href="#" class="nav-brand" data-toggle="fullscreen"><img src="../images/logo.jpg" alt="logo" /></a>
+                    <a class="btn btn-link visible-xs" data-toggle="dropdown">
+                        <i class="fa fa-ellipsis-v" style="color:#FFF;"></i>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight" style="top: 47px;left: Calc(100% - 158px);">
+                        <li>
+                            <a href="#"><i class="fa fa-download" aria-hidden="true" style="padding-right:10px;"></i>Download Results</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-lock" aria-hidden="true" style="padding-right:10px;"></i>Change Passwor</a>
+                        </li>
+                        <li>
+                            <!--     <a href="#" ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout</a>-->
+                            <a href="j_spring_security_logout"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right:10px;"></i>Logout </a>
+                        </li>
+                    </ul>
+                </header>
+                <section>
+                    <!-- nav -->
+                    <nav class="nav-primary hidden-xs nav-off-screen" id="menuContainer">
+                        <ul class="nav">
+                            <li class="dropdown-submenu headerBg3">
+                                <a href="#" class="menuTextAlign">
+                                    <img src="../images/hoverMenuIcons/hover_icon_01.png" />
+                                   
+                                    <span style="color:white;display: -moz-box;display: inherit;">RUN SIMULATION</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="censusprediction" class="dropdown-toggle menuTextAlign">
+                                    <img src="../images/icon_02.png" />
+                                 
+                                    <span style="display: -moz-box;display: inherit;">SIMULATION ANALYSIS</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a class="menuTextAlign">
+                                    <img src="../images/icon_03.png" />
+                                  
+                                    <span style="display: -moz-box;display: inherit;">STRATEGIC ANALYSIS</span>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a href="#" class="menuTextAlign">
+                                    <img src="../images/icon_04.png" />
+                                   
+                                    <span>SCENARIO ANALYSIS</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+        </aside>
+        <!-- /.aside -->
+        <!-- .vbox -->
+        <section id="content">
+            <section class="vbox">
+             </section>
+               </section>
+                
+    <!-- <script src="../js/app.v2.js"></script> -->
+    <!-- <script src="../js/jquery.pjax.js"></script> -->
+</body>
+
+</html>

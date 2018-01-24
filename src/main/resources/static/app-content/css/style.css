@@ -1,0 +1,215 @@
+.progressOuter {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progressContent {
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.menuTextAlign {
+    text-align: center;
+}
+
+
+
+/*.nvtooltip td:empty {
+    display: none;
+}*/
+
+/*.nv-group.nv-series-0 {
+    stroke-opacity: 1 !important;
+    fill-opacity: 0.5 !important;
+    fill: rgb(173, 179, 221) !important;
+    stroke: rgb(173, 179, 221) !important;
+}*/
+
+/*.legend-color-guide {
+    display: none;
+}*/
+/*.nv-x text {
+    display: none;
+}*/
+
+.nv-boxplot-whisker {
+    stroke: grey !important;
+}
+
+.centered {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+}
+
+.buttonStyle {
+    background-color: #e1844b;
+    border-color: #e1844b;
+}
+
+.nv-axisMaxMin-y {
+    display: none !important;
+}
+
+.nv-boxPlotWithAxes rect {
+    stroke-width: 2px !important;
+    stroke: #7F7F7F !important;
+}
+
+circle[class="nv-boxplot-outlier"] {
+    fill: #777777 !important;
+    stroke: #D7D7D7 !important;
+}
+
+line[style="stroke: rgb(201, 204, 233);"] {
+    stroke-width: 2px !important;
+    stroke: #7F7F7F !important;
+}
+
+line[class="nv-boxplot-tick nv-boxplot-high"] {
+    stroke: none !important;
+}
+
+line[class="nv-boxplot-tick nv-boxplot-low"] {
+    stroke: none !important;
+}
+
+text {
+    font: 12px sans-serif;
+}
+
+svg {
+    display: block;
+}
+
+html,
+body,
+#chart1,
+svg {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.nv-boxplot-outlier-act {
+    stroke: chocolate !important;
+    fill: chocolate !important;
+}
+
+.headerBg {
+    background:#f5f5f5;
+   }
+   
+   .headerBg2 {
+    background:#0050a9;
+   }
+   
+   .headerBg3 {
+    background:#3566c0;
+   }
+   
+  
+
+.csp-chart h4 {
+    color: #4a4a4a;
+    font-size: 12px;
+    text-transform: none;
+    font-weight: bold;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.csp-chart {
+    border: 1px solid#ccc;
+}
+
+    .csp-chart .legend-color-guide {
+        display: none;
+    }
+
+    .csp-chart .key {
+        display: none;
+    }
+
+    .csp-chart .value {
+        float: left;
+    }
+
+    .csp-chart .nv-point {
+        fill: #e1844b !important;
+        stroke: #e1844b !important;
+    }
+
+#bpLineChart .nv-series-2 {
+    /*stroke : #002F8E*/
+    fill: #ADB3DD !important;
+    /*fill-opacity: 0.30 !important;*/
+}
+
+#bpLineChart .nv-series-1 {
+    fill-opacity:0.25 !important;
+}
+
+#bpLineChart .nv-series-0 {
+    /*stroke : #002F8E*/
+    fill: #C3C9AB !important;
+    fill-opacity:0.25 !important;
+}
+
+#bpLineChart .nv-axisMaxMin {
+    display: none;
+}
+
+.lineChartBorder{
+    margin-top: 22px;
+    border: 1px solid#e3e3e3;
+    height: 550px;
+    padding:20px;
+}
+
+.nv-point {
+    fill: #e1844b !important;
+    stroke: #e1844b !important;
+}
+
+.nv-group.nv-series-0 {
+    stroke-opacity: 1 !important;
+    fill-opacity: 0.5 !important;
+    fill: rgb(173, 179, 221) !important;
+    stroke: rgb(173, 179, 221) !important;
+}
+.legend-color-guide {
+    display: none;
+}
+
+.sLineChart .nvtooltip td[class="key"] {
+    display: none;
+}
+
+.stat-ocuu-2 {
+background: #fff;
+padding: 15px;
+margin-bottom: 15px;
+border: 1px solid#adb3dd;
+height: 640px;
+}
+.largemap {
+border: 1px solid#e3e3e3;
+margin-top: 15px;
+}
+.nv-axisMaxMin{
+    display:none !important;
+}
+.stat-ocuu-1 {
+background: #fff;
+padding: 15px;
+margin-bottom: 15px;
+border: 1px solid#adb3dd;
+/*height: 350px;*/
+}

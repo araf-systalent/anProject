@@ -1,0 +1,45 @@
+{
+    "Price Structure": {
+      "id": "Price Structure",
+      "code": "priceStructure",
+      "values": [
+        "DayWeekMonth",
+        "Daily",
+        "Concave"
+      ]
+    },
+    "Cat Class": {
+      "id": "Cat Class",
+      "code": "catClass",
+      "values": [
+        "FORKLIFT VARIABLE REACH 8000# 40-49'",
+        "GARBAGE DUMPSTER 1.5 CUBIC YARD",
+        "GARBAGE DUMPSTER 2 CUBIC YARD",
+        "GARBAGE DUMPSTER 3 CUBIC YARD",
+        "JACK PALLET HYDRAULIC",
+        "LIGHT TOWER VERTICAL MAST TOWABLE SMALL",
+        "MINI EXCAVATOR 10000-14000#",
+        "SCISSOR LIFT 19' ELECTRIC",
+        "TRENCH BOX 10' X 20' WITH KNIFE-EDGE",
+        "TRENCH BOX ALUMINUM 8' X 10'"
+      ]
+    },
+    "Client Group": {
+      "id": "Client Group",
+      "code": "clientGroup",
+      "values": [
+        "8965908",
+        "8969245",
+        "10593950",
+        "5660786",
+        "2349120",
+        "2349120",
+        "8627859",
+        "6472656",
+        "12169414",
+        "1419116",
+        "2588424",
+        "2571587"
+      ]
+    }
+  }
