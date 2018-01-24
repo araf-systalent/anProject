@@ -5,8 +5,8 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope','$scope','$http','RunSimulationDropdownService','dropDownresponse'];
-    function HomeController(UserService, $rootScope,$scope,$http,RunSimulationDropdownService,dropDownresponse) {
+    HomeController.$inject = ['UserService', '$rootScope','$scope','$http','RunSimulationService','dropDownresponse'];
+    function HomeController(UserService, $rootScope,$scope,$http,RunSimulationService,dropDownresponse) {
         var vm = this;
         $rootScope.catClass=[];
         $rootScope.clientGroup=[];

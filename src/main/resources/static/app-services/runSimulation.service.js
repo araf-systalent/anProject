@@ -17,10 +17,10 @@
 
     angular
         .module('app')
-        .factory('RunSimulationDropdownService', RunSimulationDropdownService);
+        .factory('RunSimulationService', RunSimulationService);
 
-        RunSimulationDropdownService.$inject =  ['$http'];
-    function RunSimulationDropdownService($http) {
+        RunSimulationService.$inject =  ['$http'];
+    function RunSimulationService($http) {
         var service = {};
         service.runSimulationDropdownData=runSimulationDropdownData;
         return service;

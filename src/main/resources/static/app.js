@@ -10,12 +10,12 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                controller: 'HomeController',
+                controller: 'RunSimulation',
                 templateUrl: 'home/home.view.html',
                 controllerAs: 'vm',
                 resolve:{
-                    dropDownresponse:function(RunSimulationDropdownService){
-                        return RunSimulationDropdownService.runSimulationDropdownData()
+                    dropDownresponse:function(RunSimulationService){
+                        return RunSimulationService.runSimulationDropdownData()
                         .then(function (data) {
                            return data;
                         });
@@ -23,12 +23,12 @@
                 }
             })
             .when('/simulation', {
-                controller: 'HomeController',
+                controller: 'RunSimulation',
                 templateUrl: 'home/home.view.html',
                 controllerAs: 'vm',
                 resolve:{
-                    dropDownresponse:function(RunSimulationDropdownService){
-                        return RunSimulationDropdownService.runSimulationDropdownData()
+                    dropDownresponse:function(RunSimulationService){
+                        return RunSimulationService.runSimulationDropdownData()
                         .then(function (data) {
                            return data;
                         });
