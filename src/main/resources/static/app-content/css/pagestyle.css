@@ -17204,9 +17204,9 @@ h1{
 }
 
 
-.para-input .btn {
+.run .btn {
     display: inline-block;
-  /*  padding: 6px 70px;*/
+    padding: 6px 70px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: normal;
@@ -17461,6 +17461,15 @@ h1{
 		margin-top:0px;
 	
 }
+
+.header.navbar, .footer.navbar {
+    min-height: 0;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
 
 
 
