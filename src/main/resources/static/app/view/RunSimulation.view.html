@@ -10,27 +10,27 @@
                          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:0px;">
                           <div class="colom-parametre">
                           <h1>Parameters  </h1>
-                          <form action="#" method="get">
+                       
                           <div class="para-input">   
                           
                           <div class="form-group row">
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Date Range</label>
                           <div class="col-sm-3" style="padding-right:0px;">
-                          <input type="date" class="form-control" id="fromDate"  oninvalid="this.setCustomValidity('fill the first date')" required>
+                          <input type="date" class="form-control" id="fromDate" ng-model="vm.simRunData.fromDate" oninvalid="this.setCustomValidity('fill the first date')" required>
                          </div>
                          
                          <div class="col-sm-1 ot">to</div>
                          <div class="col-sm-3" style="padding-right:0px;">
-                          <input type="date" class="form-control" id="toDate"  oninvalid="this.setCustomValidity('fill the second date')" required>
+                          <input type="date" class="form-control" id="toDate" ng-model="vm.simRunData.toDate"  oninvalid="this.setCustomValidity('fill the second date')" required>
                          </div>
                          </div>
                          
                          <div class="form-group row">
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Client Group</label>
                           <div class="col-sm-8">
-                             <select class="form-control"  ng-model="selectedclientGroup"required>
+                             <select class="form-control"  ng-model="vm.simRunData.clientGroup" required>
                                <option value="" selected>--Select Client Group--</option>
-                              <option value={{cg}} ng-repeat="cg in vm.clientGroup">{{cg}}</option> 
+                              <option value={{cg}} ng-repeat="cg in vm.clientGroups">{{cg}}</option> 
                             
                              </select>
                             
@@ -40,9 +40,9 @@
                          <div class="form-group row">
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Cat-Class</label>
                           <div class="col-sm-8">
-                             <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedCatClass" required>
+                             <select class="form-control" id="exampleFormControlSelect1" ng-model="vm.simRunData.catClass" required>
                                  <option value="" selected>--Select cat Class--</option>
-                                 <option value={{cc}} ng-repeat="cc in vm.catClass">{{cc}}</option> 
+                                 <option value={{cc}} ng-repeat="cc in vm.catClasses">{{cc}}</option> 
                              </select>
                          </div>
                          </div>
@@ -50,10 +50,10 @@
                          <div class="form-group row">
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Price Structure</label>
                           <div class="col-sm-8">
-                             <select class="form-control" id="exampleFormControlSelect1" ng-model="selectedpriceStructure" required>
+                             <select class="form-control" id="exampleFormControlSelect1" ng-model="vm.simRunData.priceStructure" required>
                              
                              <option value="" selected>--Select price Structure--</option>
-                             <option value={{ps}} ng-repeat="ps in vm.priceStructure">{{ps}}</option> 
+                             <option value={{ps}} ng-repeat="ps in vm.priceStructures">{{ps}}</option> 
                            </select>
                          </div>
                          </div>
@@ -62,7 +62,7 @@
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Price Level</label>
                           <div class="col-sm-4">
                            <div class="input-group spinner" data-trigger="spinner">
-                           <input type="text" class="form-control text-center" value="1" data-rule="quantity">
+                           <input type="text" class="form-control text-center" ng-model="vm.simRunData.priceLevel" value="1" data-rule="quantity">
                            <div class="input-group-addon">
                              <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-up"></i></a>
                              <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
@@ -73,11 +73,11 @@
                          
                          
                          <div class="form-group row">
-                         <div class="col-sm-12 run"><h1><button type="submit" class="btn btn-warning">Run</button></h1></div>
+                         <div class="col-sm-12 run"><h1><button type="submit" ng-click="vm.executeSimulationRun()" class="btn btn-warning">Run</button></h1></div>
                          </div>
                           
                           </div>
-                        </form>
+                    
                           </div>   
      
                          </div>
@@ -97,12 +97,12 @@
                           <div class="col-lg-4 col-md-12 col-sm-12" style="padding:0px;">
                           
                           <div class="col-sm-12 epc-colom">
-                          <div class="epc-value">+ $12,345  </div>
+                          <div class="epc-value">{{vm.statistics.estimatePrftChg}} </div>
                           <div class="epc-des">estimated profit chg</div>
                           </div>
                           
                           <div class="col-sm-12 spc-colom">
-                          <div class="spc-value">+ $12,345  </div>
+                          <div class="spc-value">{{vm.statistics.stdDevPrftChg}}  </div>
                           <div class="spc-des">stdev profit chg</div>
                           </div>
                           
@@ -112,17 +112,17 @@
                           
                           <div class="col-sm-12 avg-colom">
                           <div class="avg-head"><h2>Avg chg in rental length</h2></div>
-                          <div class="avg-value"> +0.5 Days</div>
+                          <div class="avg-value"> {{vm.statistics.avgChgRentalLength}} Days</div>
                           </div>
                           
                           <div class="col-sm-12 avg-colom">
                           <div class="avg-head"><h2>Rentals analyzed</h2></div>
-                          <div class="avg-value">1500</div>
+                          <div class="avg-value">{{vm.statistics.rentalAnalyzed}} </div>
                           </div>
                           
                           <div class="col-sm-12 avg-colom">
                           <div class="avg-head"><h2>Days analyzed </h2></div>
-                          <div class="avg-value"> 60</div>
+                          <div class="avg-value"> {{vm.statistics.daysAnalyzed}} </div>
                           </div>
                           
                           </div>
