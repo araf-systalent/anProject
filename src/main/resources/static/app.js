@@ -16,8 +16,14 @@
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
                         return RunSimulationService.getDropDownData()
-                        .then(function (data) {
-                           return data;
+                        .then(function (response) {
+                            if(response.success){
+                                return response.data;
+                            }
+                            else{
+                                return {};
+                            }
+                           
                         });
                     }
                 }
@@ -29,8 +35,14 @@
                 resolve:{
                     dropDownresponse:function(RunSimulationService){
                         return RunSimulationService.getDropDownData()
-                        .then(function (data) {
-                           return data;
+                        .then(function (response) {
+                            if(response.success){
+                                return response.data;
+                            }
+                            else{
+                                return {};
+                            }
+                           
                         });
                     }
                 }
